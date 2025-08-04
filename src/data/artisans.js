@@ -36,7 +36,7 @@ export default [
   },
   {
     id: 6,
-    name: "Okafor Blessing",
+    name: "Chukwudi Blessing",
     skill: "Makeup Artist",
     location: "Owerri",
     image: "https://thumbs.dreamstime.com/b/young-women-sitting-dressing-table-looking-mirror-makeup-artist-applying-concealer-cosmetic-brush-female-261330201.jpg",

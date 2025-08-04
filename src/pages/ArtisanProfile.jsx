@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import React from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import artisans from "../data/artisans";
 
 const ArtisanProfile = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const artisan = artisans.find((a) => a.id === parseInt(id));
-  const [showModal, setShowModal] = useState(false);
 
   if (!artisan) {
     return (
@@ -19,11 +19,11 @@ const ArtisanProfile = () => {
   }
 
   const handleBooking = () => {
-    setShowModal(true);
-  };
+    // Save artisan info to localStorage (optional)
+    localStorage.setItem("selectedArtisan", JSON.stringify(artisan));
 
-  const closeModal = () => {
-    setShowModal(false);
+    // Redirect user to booking form
+    navigate("/book");
   };
 
   return (
@@ -39,8 +39,8 @@ const ArtisanProfile = () => {
         <p className="text-gray-700 mb-4"><strong>Location:</strong> {artisan.location}</p>
         <p className="text-gray-600 mb-6">
           Get connected with experienced and skilled professionals ready to deliver quality work—from repairs and installations to custom services. Fast, affordable, and always professional.
-       📍 Serving homes and businesses in your area!
-       📞 Book now and get it done right!
+          📍 Serving homes and businesses in your area!
+          📞 Book now and get it done right!
         </p>
         <button
           className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
@@ -49,21 +49,6 @@ const ArtisanProfile = () => {
           Book Now
         </button>
       </div>
-
-      {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm text-center">
-            <h3 className="text-lg font-semibold text-green-600 mb-2">Success!</h3>
-            <p className="mb-4">Your booking for {artisan.name} was successful.</p>
-            <button
-              onClick={closeModal}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
