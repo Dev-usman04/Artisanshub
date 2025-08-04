@@ -1,12 +1,49 @@
-# React + Vite
+# ArtisanHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ArtisanHub is a web application that connects users with skilled artisans in their local area. Built with React and styled with Tailwind CSS, it provides a platform for finding and booking professional services.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Artisan Directory**: Browse through a curated list of skilled professionals including plumbers, electricians, mechanics, and more
+- **Detailed Profiles**: View comprehensive artisan profiles with their skills, location, and professional information
+- **Booking System**: Simple booking process with a user-friendly form to schedule services
+- **Responsive Design**: Fully responsive interface that works seamlessly across desktop and mobile devices
 
-## Expanding the ESLint configuration
+## How It Works
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Browse Directory**: Users can view all available artisans in the directory page
+2. **View Profiles**: Click on any artisan to see their detailed profile, including:
+   - Professional photo
+   - Name and skill set
+   - Location
+   - Service description
+
+3. **Booking Process**: 
+   - Select an artisan from their profile page
+   - Click "Book Now" to schedule a service
+   - Fill out the booking form with your details:
+     - Full name
+     - Phone number
+     - Address
+   - Submit your booking
+
+## Technical Stack
+
+- **Frontend**: React.js
+- **Routing**: React Router DOM
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **State Management**: React Hooks
+- **Data Storage**: Local Storage for booking information
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build

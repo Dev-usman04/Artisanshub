@@ -15,10 +15,10 @@ export default [
   },
   {
     id: 3,
-    name: "Soliu Musa",
+    name: "Aliu Musa",
     skill: "stylist",
-    location: "Kano",
-    image: "https://viscorner.com/wp-content/uploads/ultimatemember/22691/profile_photo-190x190.jpg",
+    location: "Asaba",
+    image: "https://www.bellanaija.com/?attachment_id=698930",
   },
   {
     id: 4,
